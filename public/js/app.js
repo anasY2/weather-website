@@ -1,19 +1,4 @@
-console.log("Javascript from public file is loaded!");
-// fetch("https://puzzle.mead.io/puzzle").then((response)=>{
-//     response.json().then((data)=>{
-//         console.log(data);
-//     })
-// })
-// fetch("http://localhost:3000/weather?address=!").then((response=>{
-//     response.json().then((data)=>{
-//         if(data.error){
-//           return console.log(data.error);
-//         }
-//         console.log(data.forecast);
-//         console.log(data.location);
-//         console.log(data.address);
-//     })
-// }))
+
 let weatherForm=document.querySelector('form')
 let search=document.querySelector('input')
 let messageOne=document.querySelector('#message1')
@@ -31,9 +16,7 @@ weatherForm.addEventListener('submit',(e)=>{
             }
             messageOne.textContent=data.forecast;
             messageTwo.textContent=data.location;
-            // console.log(data.forecast);
-            // console.log(data.location);
-            //console.log(data.address);
+           
         })
     })
  search.value=""

@@ -64,9 +64,7 @@ app.get("/weather", (req, res) => {
       });
     }
   });
-  // res.send({
-  //   address: req.query.address,
-  // });
+  
 });
 app.get("/products", (req, res) => {
   if (!req.query.search) {
