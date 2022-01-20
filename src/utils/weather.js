@@ -13,7 +13,8 @@ const weather = ({lat,long,place}, callback) => {
           temp: response.body.current.temperature,
           feelTemp: response.body.current.feelslike,
           desc: response.body.current.weather_descriptions[0],
-          place:place
+          place:place,
+          date_time:response.body.location.localtime
         };
         callback(undefined,data);
       }

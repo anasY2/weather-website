@@ -50,7 +50,7 @@ app.get("/weather", (req, res) => {
         error: error,
       });
     } else {
-      weather({lat,long,place}, (error, { temp, feelTemp, desc,place }) => {
+      weather({lat,long,place}, (error, { temp, feelTemp, desc,place,date_time }) => {
        if(error){
          res.send({
            error:error
@@ -59,7 +59,8 @@ app.get("/weather", (req, res) => {
         res.send({
          forecast: desc+".It is "+temp+"deg out.It feels like "+feelTemp+"deg",
           location:place,
-          address:req.query.address
+          address:req.query.address,
+          dateAndTime:date_time
         });
       });
     }
